@@ -1,6 +1,6 @@
 # AllAfrica Web Scraper
 
-**AllAfrica Web Scraper** is a professional Python-based tool designed to extract and store news articles from [AllAfrica](https://allafrica.com). This project leverages Selenium for dynamic web scraping, concurrent processing for efficiency, and SQLite for structured data storage. It is ideal for collecting news data, including article metadata, content, and images, in a scalable and robust manner. This README provides a detailed guide to the project's workflow, structure, advantages, and usage, demonstrating expertise in programming and web scraping.
+**AllAfrica Web Scraper** is a professional Python-based tool designed to extract and store news articles from [AllAfrica](https://allafrica.com). This project leverages Selenium for dynamic text and image data web scraping, concurrent processing for efficiency, and SQLite for structured data storage. It is ideal for collecting news data, including article metadata, content, and images, in a scalable and robust manner. 
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -13,7 +13,7 @@
 8. [License](#license)
 
 ## Project Overview
-The AllAfrica Web Scraper systematically extracts news articles from AllAfrica's latest news pages, capturing metadata (e.g., headline, author, publication date), content (e.g., story text, embedded links), and images. Data is stored in a SQLite database for easy querying, with support for concurrent scraping and proxy rotation to handle large-scale tasks. The project showcases expertise in:
+The AllAfrica Web Scraper systematically extracts news articles from AllAfrica's news pages, capturing metadata (e.g., headline, author, publication date), content (e.g., story text, embedded links), and images. Data is stored in a SQLite database for easy querying, with support for concurrent scraping and proxy rotation to handle large-scale tasks. The project showcases expertise in:
 - **Web Scraping**: Handling dynamic content with Selenium.
 - **Concurrent Processing**: Using `concurrent.futures` for parallel execution.
 - **Database Management**: Storing structured data with SQLite and Pandas.
@@ -64,7 +64,7 @@ The AllAfrica Web Scraper operates in a streamlined, fault-tolerant manner. Belo
    ```
 
 2. **Scraping New Articles**:
-   - Fetches article URLs from `https://allafrica.com/latest/?page={page_number}`.
+   - Fetches article URLs from `https://allafrica.com/latest/`.
    - Identifies new articles by comparing against `most_recent_scrapped_link`.
    - Scrapes articles concurrently.
    ```python
